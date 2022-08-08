@@ -1,5 +1,5 @@
 import Bookshelf from './books.js';
-import { DateTime } from "../node_modules/luxon/src/luxon.js";
+import { DateTime } from '../node_modules/luxon/src/luxon.js';
 
 const myBookshelf = new Bookshelf();
 
@@ -15,15 +15,15 @@ const render = () => {
       element.innerText = `${books.title} by ${books.author}`;
       List.appendChild(element);
 
-      function deleteBook(event) {
+      // Remove Button
+      const deleteButton = document.createElement('button');
+
+      function deleteBook() {
         const idToDelete = deleteButton.id;
         myBookshelf.DeleteBook(idToDelete);
         myBookshelf.SaveBookshelfLocal();
         render();
       }
-
-      // Remove Button
-      const deleteButton = document.createElement('button');
       deleteButton.innerText = 'Remove';
       deleteButton.classList.add('delButton');
       deleteButton.onclick = deleteBook;
@@ -45,8 +45,8 @@ button.addEventListener('click', () => {
   render();
 });
 
-function date () {
-  const dt = DateTime.now()
+function date() {
+  const dt = DateTime.now();
   document.getElementById('date-time').innerHTML = dt.toLocaleString(DateTime.DATETIME_MED_WITH_SECONDS);
 }
 date();
