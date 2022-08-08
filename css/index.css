@@ -1,0 +1,96 @@
+body {
+  background-color: white;
+  width: 100%;
+  font-family: 'Courier New', Courier, monospace;
+  font-weight: bold;
+}
+
+.navbar {
+  display: flex;
+  justify-content: space-between;
+  border: solid;
+  width: 98%;
+  padding: 5px;
+}
+
+#list,
+#book {
+  border-right: 1px solid black;
+  margin-left: 5px;
+  padding-right: 10px;
+}
+
+.navbar:hover {
+  cursor: pointer;
+}
+
+.currentTime {
+  text-align: end;
+  padding-right: 1%;
+  padding-bottom: 2%;
+  padding-top: 3px;
+}
+
+h1 {
+  text-align: center;
+}
+
+.awesomeList {
+  display: none;
+  flex-direction: column;
+  align-items: center;
+  color: black;
+  padding-bottom: 1rem;
+}
+
+.eachBook {
+  border: 1px solid black;
+  padding: 0.5rem;
+  display: flex;
+  justify-content: space-between;
+  width: 60%;
+  border-radius: 10px;
+  align-items: center;
+}
+
+.eachBook:nth-child(odd) {
+  background-color: lightgray;
+}
+
+.InputForm {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  width: 20%;
+  margin-inline: 40%;
+}
+
+#title,
+#author {
+  width: 100%;
+  padding: 4px;
+  font-size: 1rem;
+}
+
+.InputForm button,
+.delButton {
+  align-self: flex-end;
+  border-bottom: 4px solid black;
+  border-right: 4px solid black;
+  padding: 5px;
+}
+
+.contact {
+  flex-direction: column;
+  align-items: center;
+  display: none;
+}
+
+#footer {
+  position: absolute;
+  bottom: 0;
+  padding: 10px;
+  border: 1px solid black;
+  width: 97.5%;
+  margin-bottom: 10px;
+}
